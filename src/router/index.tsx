@@ -47,14 +47,15 @@ function HomeTabs() {
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,
+          tabBarActiveTintColor: '#B70093',
           // Floating Tab Bar...
           tabBarStyle: {
             backgroundColor: 'white',
             position: 'absolute',
-            bottom: 40,
+            bottom: 20,
             marginHorizontal: 20,
             // Max Height...
-            height: 60,
+            height: 80,
             borderRadius: 10,
             // Shadow...
             shadowColor: '#000',
@@ -80,11 +81,13 @@ function HomeTabs() {
                   // centring Tab Button...
                   position: 'absolute',
                   top: 20,
+                  alignItems: 'center',
                 }}>
                 <Icon
                   name="home"
-                  size={20}
-                  color={focused ? 'red' : 'gray'}></Icon>
+                  size={30}
+                  color={focused ? '#B70093' : 'gray'}></Icon>
+                <Text style={{fontSize: 12}}>Home</Text>
               </View>
             ),
           }}
@@ -99,7 +102,7 @@ function HomeTabs() {
           })}></Tab.Screen>
 
         <Tab.Screen
-          name={'CinemasScreen'}
+          name={'Cinema'}
           component={CinemasScreen}
           options={{
             tabBarIcon: ({focused}) => (
@@ -108,11 +111,13 @@ function HomeTabs() {
                   // centring Tab Button...
                   position: 'absolute',
                   top: 20,
+                  alignItems: 'center',
                 }}>
                 <Icon
                   name="movie-roll"
-                  size={20}
-                  color={focused ? 'red' : 'gray'}></Icon>
+                  size={30}
+                  color={focused ? '#B70093' : 'gray'}></Icon>
+                <Text style={{fontSize: 12}}>Cinemas</Text>
               </View>
             ),
           }}
@@ -134,23 +139,20 @@ function HomeTabs() {
           name={'TicketScreen'}
           component={TicketScreen}
           options={{
+            tabBarShowLabel: false,
             tabBarIcon: ({focused}) => (
               <TouchableOpacity>
                 <View
                   style={{
                     width: 55,
                     height: 55,
-                    backgroundColor: 'red',
+                    backgroundColor: '#B70093',
                     borderRadius: 30,
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginBottom: Platform.OS == 'android' ? 50 : 30,
                   }}>
-                  <Icon
-                    name={'ticket-percent'}
-                    color={'#FFFFFF'}
-                    style={{width: 22, height: 22}}
-                  />
+                  <Icon name={'ticket-percent'} color={'#FFFFFF'} size={30} />
                 </View>
               </TouchableOpacity>
             ),
@@ -160,17 +162,20 @@ function HomeTabs() {
           name={'FoodScreen'}
           component={FoodScreen}
           options={{
+            tabBarLabel: 'Food',
             tabBarIcon: ({focused}) => (
               <View
                 style={{
                   // centring Tab Button...
                   position: 'absolute',
                   top: 20,
+                  alignItems: 'center',
                 }}>
                 <Icon
                   name="popcorn"
-                  size={20}
-                  color={focused ? 'red' : 'gray'}></Icon>
+                  size={30}
+                  color={focused ? '#B70093' : 'gray'}></Icon>
+                <Text style={{fontSize: 12}}>Food Order</Text>
               </View>
             ),
           }}
@@ -188,17 +193,20 @@ function HomeTabs() {
           name={'ProfileScreen'}
           component={ProfileScreen}
           options={{
+            tabBarLabel: 'Profile',
             tabBarIcon: ({focused}) => (
               <View
                 style={{
                   // centring Tab Button...
                   position: 'absolute',
                   top: 20,
+                  alignItems: 'center',
                 }}>
                 <Icon
                   name="account"
-                  size={20}
-                  color={focused ? 'red' : 'gray'}></Icon>
+                  size={30}
+                  color={focused ? '#B70093' : 'gray'}></Icon>
+                <Text style={{fontSize: 12}}>Profile</Text>
               </View>
             ),
           }}
@@ -216,7 +224,7 @@ function HomeTabs() {
         style={{
           width: getWidth() - 20,
           height: 2,
-          backgroundColor: 'red',
+          backgroundColor: '#B70093',
           position: 'absolute',
           bottom: 98,
           // Horizontal Padding = 20...
