@@ -26,6 +26,7 @@ import {
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {heightBase} from '../styling/base';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -140,6 +141,7 @@ function HomeTabs() {
           component={TicketScreen}
           options={{
             tabBarShowLabel: false,
+            lazy: true,
             tabBarIcon: ({focused}) => (
               <TouchableOpacity>
                 <View
@@ -175,7 +177,9 @@ function HomeTabs() {
                   name="popcorn"
                   size={30}
                   color={focused ? '#B70093' : 'gray'}></Icon>
-                <Text style={{fontSize: 12}}>Food Order</Text>
+                <Text style={{fontSize: 12, maxHeight: heightBase * 0.03}}>
+                  Food Order
+                </Text>
               </View>
             ),
           }}
