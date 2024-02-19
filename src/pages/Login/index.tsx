@@ -17,7 +17,7 @@ const Login = ({navigation}: {navigation: any}) => {
   const [email, setEmail] = useState('');
   const [validate, setValidate] = useState(true);
   const [password, setPassword] = useState('');
-  const [visible, setVisible] = React.useState(true);
+  const [visible, setVisible] = React.useState(false);
 
   const validateEmail = (email: string) => {
     return String(email)
@@ -59,7 +59,11 @@ const Login = ({navigation}: {navigation: any}) => {
               mode="contained"
               buttonColor="#B70093"
               textColor="#FFFFFF"
-              style={{marginTop: 20}}>
+              style={{marginTop: 20}}
+              onPress={() => {
+                setVisible(false);
+                navigation.navigate('HomeTabs');
+              }}>
               Back to Home
             </Button>
           </Dialog.Content>
@@ -128,7 +132,7 @@ const Login = ({navigation}: {navigation: any}) => {
           left={
             <TextInput.Icon
               icon="mail"
-              color={validateEmail(email) ? '#B70093' : '#F4F4F4'}
+              color={validateEmail(email) ? '#B70093' : '#000000'}
             />
           }
           value={email}
@@ -172,6 +176,7 @@ const Login = ({navigation}: {navigation: any}) => {
           mode="contained"
           buttonColor="#B70093"
           textColor="#FFFFFF"
+          onPress={() => setVisible(true)}
           disabled={validate}>
           Login
         </Button>
