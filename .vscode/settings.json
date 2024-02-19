@@ -1,0 +1,16 @@
+{
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"java.gradle.buildServer.enabled": "off",
+	"javascript.format.enable": false,
+	"javascript.suggest.names": false,
+	"javascript.validate.enable": false,
+	"javascript.suggestionActions.enabled": false,
+	"java.configuration.detectJdksAtStart": false,
+	"java.format.enabled": false,
+	"java.selectionRange.enabled": false,
+	"java.debug.settings.forceBuildBeforeLaunch": false,
+	"java.dependency.autoRefresh": false,
+	"java.dependency.syncWithFolderExplorer": false,
+	"java.project.explorer.showNonJavaResources": false,
+	"java.help.showReleaseNotes": false
+}
